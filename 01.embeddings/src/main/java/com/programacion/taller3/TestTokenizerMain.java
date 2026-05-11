@@ -32,11 +32,10 @@ public class TestTokenizerMain {
                 .toList();
 
         AtomicInteger counter = new AtomicInteger(0);
-        var vocab = allWords.stream()
+        return  allWords.stream()
                 .map(it -> new Pair(counter.getAndIncrement(), it))
                 .toList();
 
-        return vocab;
     }
 
     static List<Pair> vocabularyEx (String PATH) throws  Exception {
@@ -61,11 +60,10 @@ public class TestTokenizerMain {
         allWords.add("<|unk|>");
 
         AtomicInteger counter = new AtomicInteger(0);
-        var vocab = allWords.stream()
+        return allWords.stream()
                 .map(it -> new Pair(counter.getAndIncrement(), it))
                 .toList();
 
-        return vocab;
     }
 
     static void main(String [] args) throws Exception  {
