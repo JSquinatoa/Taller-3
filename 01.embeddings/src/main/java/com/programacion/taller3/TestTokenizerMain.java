@@ -10,8 +10,7 @@ import java.util.stream.Stream;
 public class TestTokenizerMain {
 
     // Este es la carcaga del archivo
-    public static final String PATH = "D:/Universidad/Decimo Semestre/Taller III/Taller/01.embeddings/the-verdict.txt";
-    public static final String REGEX = "(?=[,.:;?_!\"()']|--|\\s)|(?<=[,.:;?_!\"()']|--|\\s)";
+    public static final String PATH = "C://Users//fing.labcom//IdeaProjects//Taller//01.embeddings//the-verdict.txt";
 
     static List<Pair> vocabulary (String PATH) throws  Exception {
 
@@ -19,23 +18,33 @@ public class TestTokenizerMain {
                 .reduce(String::concat)
                 .orElse("");
 
-        var tokens = raw_text.split(REGEX);
+
+        String regex = "(?=[,.:;?_!\"()']|--|\\s)|(?<=[,.:;?_!\"()']|--|\\s)";
+
+        var tokens = raw_text.split(regex);
 
         var preprocessed = Stream.of(tokens)
                 .map(String::trim)
                 .filter(s -> !s.isEmpty())
                 .toList();
 
+
+        //--
+
         var allWords = preprocessed.stream()
                 .distinct()
                 .sorted()
                 .toList();
 
+        var vocabsize = allWords.size();
+
+
         AtomicInteger counter = new AtomicInteger(0);
-        return  allWords.stream()
+        var vocab = allWords.stream()
                 .map(it -> new Pair(counter.getAndIncrement(), it))
                 .toList();
 
+        return vocab;
     }
 
     static List<Pair> vocabularyEx (String PATH) throws  Exception {
@@ -44,12 +53,18 @@ public class TestTokenizerMain {
                 .reduce(String::concat)
                 .orElse("");
 
-        var tokens = raw_text.split(REGEX);
+
+        String regex = "(?=[,.:;?_!\"()']|--|\\s)|(?<=[,.:;?_!\"()']|--|\\s)";
+
+        var tokens = raw_text.split(regex);
 
         var preprocessed = Stream.of(tokens)
                 .map(String::trim)
                 .filter(s -> !s.isEmpty())
                 .toList();
+
+
+        //--
 
         var allWords = preprocessed.stream()
                 .distinct()
@@ -60,10 +75,11 @@ public class TestTokenizerMain {
         allWords.add("<|unk|>");
 
         AtomicInteger counter = new AtomicInteger(0);
-        return allWords.stream()
+        var vocab = allWords.stream()
                 .map(it -> new Pair(counter.getAndIncrement(), it))
                 .toList();
 
+        return vocab;
     }
 
     static void main(String [] args) throws Exception  {
@@ -72,7 +88,10 @@ public class TestTokenizerMain {
 
         vocab.stream()
                 .takeWhile(it -> it.tokenId() < 51)
+
                 .forEach(System.out::println);
+
+        //--
 
         var text = "\"It's the last he painted, you know,\" Mrs. Gisburn said with pardonable pride.";
         SimpleTokenizerV1 tokenizerV1 = new SimpleTokenizerV1(vocab);

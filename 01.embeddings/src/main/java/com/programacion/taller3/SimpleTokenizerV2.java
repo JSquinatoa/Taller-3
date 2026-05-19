@@ -16,9 +16,9 @@ public class SimpleTokenizerV2 {
     public SimpleTokenizerV2(List<Pair> vocab){
         strtoInt = vocab.stream()
                            .collect(Collectors.toMap(Pair::token, Pair::tokenId));
-
         intToStr = vocab.stream()
                         .collect(Collectors.toMap(Pair::tokenId, Pair::token));
+
 
     }
 
@@ -29,6 +29,7 @@ public class SimpleTokenizerV2 {
                 .map(token -> strtoInt.getOrDefault(token, strtoInt.get("<|unk|>")))
                 .filter(Objects::nonNull)
                 .toList();
+
     }
 
     public String decode (List<Integer> ids){

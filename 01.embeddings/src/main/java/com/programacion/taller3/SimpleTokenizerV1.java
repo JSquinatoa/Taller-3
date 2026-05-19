@@ -16,9 +16,10 @@ public class SimpleTokenizerV1 {
     public SimpleTokenizerV1 (List<Pair> vocab){
         strtoInt = vocab.stream()
                            .collect(Collectors.toMap(Pair::token, Pair::tokenId));
-
         intToStr = vocab.stream()
                         .collect(Collectors.toMap(Pair::tokenId, Pair::token));
+
+
     }
 
     public List<Integer> encode(String text) {
