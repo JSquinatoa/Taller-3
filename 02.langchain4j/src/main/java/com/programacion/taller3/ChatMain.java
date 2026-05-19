@@ -7,7 +7,7 @@ import dev.langchain4j.model.openai.OpenAiChatModel;
 public class ChatMain {
 
     static String base_url="https://api.groq.com/openai/v1";
-    static String key = "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";
+    static String key = "";
     static String model = "llama-3.1-8b-instant";
 
     public static ChatModel chatModelGrok() {
