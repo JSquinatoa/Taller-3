@@ -26,9 +26,7 @@ interface AsistenteConTools {
 
 public class FunctionCallingMain {
 
-    // CORREGIDO: Se agregó el modificador 'public'
     static void main(String[] args) {
-        // Asumiendo que ChatMain.chatModelGrok() devuelve un modelo compatible con Tools (como llama-3.1 o similar de Groq)
         var model = ChatMain.chatModel();
 
         var service = AiServices.builder(AsistenteConTools.class)
