@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/01.embeddings" />
             <option value="$PROJECT_DIR$/02.langchain4j" />
+            <option value="$PROJECT_DIR$/03.spring-ai" />
           </set>
         </option>
         <option name="myGradleHome" value="" />
