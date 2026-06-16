@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/02.langchain4j" />
             <option value="$PROJECT_DIR$/03.spring-ai" />
             <option value="$PROJECT_DIR$/10.spring-prompt" />
+            <option value="$PROJECT_DIR$/11.spring-rag" />
           </set>
         </option>
         <option name="myGradleHome" value="" />

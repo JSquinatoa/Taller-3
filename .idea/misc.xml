@@ -8,11 +8,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/03.spring-ai/pom.xml" />
+        <option value="$PROJECT_DIR$/11.spring-rag/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/03.spring-ai/pom.xml" />
+        <option value="$PROJECT_DIR$/11.spring-rag/pom.xml" />
       </set>
     </option>
   </component>
