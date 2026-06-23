@@ -7,6 +7,10 @@ app:
   url: https://api.groq.com/openai/v1
 
 spring:
+  docker:
+    compose:
+      enabled: true
+      file: 11.spring-rag/docker-compose.yml
   ai:
     model:
       embedding: transformers
@@ -16,6 +20,9 @@ spring:
           model-uri: classpath:models/model.onnx
         tokenizer:
           uri: classpath:models/tokenizer.json
+    vectorstore:
+      qdrant:
+        collection-name: springai
 
     openai:
       api-key: ${app.key}
