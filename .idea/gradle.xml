@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/03.spring-ai" />
             <option value="$PROJECT_DIR$/10.spring-prompt" />
             <option value="$PROJECT_DIR$/11.spring-rag" />
+            <option value="$PROJECT_DIR$/12.spring-mcp-client" />
           </set>
         </option>
         <option name="myGradleHome" value="" />
