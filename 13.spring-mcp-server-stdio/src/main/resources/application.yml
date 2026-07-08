@@ -1,0 +1,14 @@
+spring:
+  main:
+    banner-mode: off
+    web-application-type: none
+  ai:
+    mcp:
+      server:
+        name: mi-mcp-server
+        version: 1.0.0
+
+logging:
+  level:
+    root: ERROR
+

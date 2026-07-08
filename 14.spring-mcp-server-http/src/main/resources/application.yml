@@ -1,0 +1,11 @@
+server:
+  port: 3001
+spring:
+  ai:
+    mcp:
+      server:
+        name: mi-mcp-server
+        version: 1.0.0
+#        protocol: streamable
+#        streamable-http:
+#          mcp-endpoint: /mcp estos viene por defecto todo lo comentado

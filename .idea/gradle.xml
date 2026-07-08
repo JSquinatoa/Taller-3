@@ -14,6 +14,8 @@
             <option value="$PROJECT_DIR$/10.spring-prompt" />
             <option value="$PROJECT_DIR$/11.spring-rag" />
             <option value="$PROJECT_DIR$/12.spring-mcp-client" />
+            <option value="$PROJECT_DIR$/13.spring-mcp-server-stdio" />
+            <option value="$PROJECT_DIR$/14.spring-mcp-server-http" />
           </set>
         </option>
         <option name="myGradleHome" value="" />

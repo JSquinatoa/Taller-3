@@ -2,10 +2,11 @@ server:
   port: 8090
 
 app:
-#  key: ${APP_KEY}
-  aimodel: gemma-4-E4B-it-Q4_K_S
-#  url: https://api.groq.com/openai/v1
-  url: http://127.0.0.1:8080/
+  key: ${APP_KEY}
+#  aimodel: gemma-4-E4B-it-Q4_K_S
+  aimodel: llama-3.1-8b-instant
+  url: https://api.groq.com/openai/v1
+#  url: http://127.0.0.1:8080/
 
 spring:
   docker:
