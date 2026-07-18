@@ -22,7 +22,5 @@ public class FileReaderRouter extends RouteBuilder {
                 .bean("fileProcessor")
                 .bean("transformerProcessor")
                 .bean("embeddingProcessor");
-
-        //  .to("direct:processFile"); // Puedes descomentar esto cuando habilites tu procesador
     }
 }

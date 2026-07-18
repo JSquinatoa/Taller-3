@@ -27,7 +27,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-actuator")
 
     // 3. Corrección en el nombre del starter de Spring AI para WebMVC
-    implementation("org.springframework.ai:spring-ai-mcp-server-webmvc-spring-boot-starter")
+    implementation("org.springframework.ai:spring-ai-starter-mcp-server-webmvc")
 }
 
 dependencyManagement {
